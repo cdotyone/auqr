@@ -1,0 +1,68 @@
+@import "bootstrap-variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Variable overrides
+$barHeight: 2.2rem;
+$navbar-height: 40px;
+$sidebar-minimized-width: 40px;
+$neutralDark:  #869fac;
+$input-disabled-bg: #FFFFFF;
+
+$fa-font-path: "~@fortawesome/fontawesome-pro/webfonts";
+@import "~@fortawesome/fontawesome-pro/scss/variables";
+
+$ux-font-path: "~@vux/icons/fonts";
+@import "colors";
+
+
+/* set the overriding variables */
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+$container-max-widths: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+tr.table-row-hover {
+  @include hover() {
+    color: $table-hover-color;
+    background-color: $table-hover-bg !important;
+  }
+}

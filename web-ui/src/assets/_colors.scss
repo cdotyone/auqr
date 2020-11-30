@@ -1,0 +1,56 @@
+/* Colors
+--------------------- */
+// SITE SPECIFIC RESET COLORS
+$primary-dark:          #47637E;
+$primary:               lighten($primary-dark,20);
+$secondary:             darken($primary, 8);
+$link-color:            $secondary; //Optionally change the link colors
+$tertiary:              lighten($primary, 20);
+$accent:                complement($primary);
+$glow:                  desaturate(lighten(adjust_hue($primary, 0), 49), 18);
+$header-bar:            #70828B;
+
+$white:                 #ffffff;
+$black:                 #000000;
+
+$shadow:                #6A5ACD;
+$highlight:             #FFE599; // pale yellow
+$hightlight-secondary:  #FFA500; //orange
+
+$gray:                  #607d8b;
+$gray-dark:             darken($gray,30);
+$gray-light:            lighten($gray,30);
+$gray-lighter:          lighten($gray,40);
+$gray-lightest:         lighten($gray,50);
+
+$brand-primary:         $primary;
+$brand-success:         rgb(0,  green($primary), 0);
+$brand-info:            lighten( rgb(0, 0, blue($primary)), 10);
+$brand-warning:         saturate($hightlight-secondary, 10);
+$brand-danger:          darken(#d2322d, 8);
+$go: #3c763d;
+
+.move-up{
+  margin-top: -3px;
+}
+
+.color-primary {
+  color: $brand-primary !important;
+}
+
+.color-success {
+  color: $brand-success !important;
+}
+
+.color-info {
+  color: $brand-info !important;
+}
+
+.color-warning {
+  color: $brand-warning !important;
+}
+
+.color-danger {
+  color: $brand-danger !important;
+}
+
